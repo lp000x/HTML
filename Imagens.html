@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens HTML</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<header>
+    <h1>SOBRE IMAGENS</h1>
+    <h2>TEMA: MÍDIAS</h2>
+</header>
+
+
+
+<main>
+    <div>
+        <ul>
+            <li>Como Inserir Imagens</li>
+            <li>Como Deixar Imagens Compatíves</li>
+            <li>Principais Formatos</li>
+                <ul>
+                    <li>Jpeg</li>
+                    <li>PNG</li>
+                    <li>SVG</li>
+                </ul>
+            <li>Cuidados</li>
+                <ul>
+                    <li>Tamanhos de Imagens</li>
+                    <li>Direitos Autorais</li>
+                </ul>
+            <li>Tags Para Imagens</li>
+        </ul>
+    </div>
+
+
+    <h1>Como inserir Imagens</h1>
+    <p>Para inserir imagens, é utilizada a tag <code>img</code>. Mais explicações sobre a tag vem na ultima parte (Tags para imagens).</p>
+    <p>É possível usar diferentes URL e caminhos como src:</p>
+    <ul>
+        <li>Arquivos locais (C:/)</li>
+        <li>URL locais (file://)</li>
+        <li>URL remotas (https)</li>
+    </ul>
+    <img src="C:\Users\Luis Paulo\Downloads\transferir.jpg" alt="leon" style: width=300px; height="200px">
+    <br>
+    <h1>Compatibilidade de Tamanhos</h1>
+    <p>A Compatibilidade de tamanhos, ou responsividade, é feita usando a tag <code>picture</code></p>
+    <picture>
+        <source media="(max-width: 500px)" srcset="https://i.ibb.co/dJpPzCTf/leon500.jpg" type="image/jpg">
+        <source media="(max-width: 900px)" srcset="https://i.ibb.co/23NXPNDY/leon900.jpg" type="image/jpg">
+        <img src="https://i.ibb.co/Cp8TXSpF/leon1400.jpg" alt="leon1400" style: width="600px">
+    </picture>
+</main>
+
+
+
+<footer>
+   <p><a href="videos.html">Ver Vídeos</a></p>
+    <p><a href="audios.html">Ver Aúdios</a></p>
+</footer>
+
+
+</body>
+</html>

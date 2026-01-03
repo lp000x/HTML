@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+
+    <link rel="stylesheet" href="estilopadrao.css">
+</head>
+<body>
+    
+    <header>
+        <h1>LISTAS</h1>
+        <h2>TEMA: ELEMENTOS</h2>
+    </header>
+
+
+
+    <main>
+        <div>
+         <ul>
+            <li>O Que São Listas
+              <ul>
+                  <li>Listas Ordenadas</li>
+                  <li>Listas Desordenadas</li>
+                  <li>Listas Mistas</li>
+              </ul>
+            <li>Como Inserir Listas</li>
+            <li>Como Alterar O Icone Das Listas</li>
+         </ul>
+        </div>
+        <h1>Em HTML existem as listas ordenadas e desordenadas.</h1>
+        <ul>
+            <li>Listas desordenadas não possuem numeração e nem letras, de forma que não existe sequência nos itens listados</li>
+            <li>Sua tag é <code>ul</code></li>
+        </ul>
+        <ol>
+            <li>Já as listas ordenadas possuem uma ordem númerica ou alfabética, de forma que os itens listados seguem uma sequência.</li>
+            <li>Sua tag é <code>ol</code></li>
+        </ol>
+        <p>Para ambas as listas, é preciso usar a tag <code>li</code>, de list, para adicionar itens à lista.</p>
+        <h2>Personalização</h2>
+        <p>Caso eu queira alterar a marcação da lista, eu uso o atributo type="" dentro da tag de abertura. Porque não style, já que é uma estilização? Pois é não é uma estilização, é uma alteração na exibição da lista enquanto tag.</p>
+        <p>Para as OL, eu tenho as opções: Númerica, alfabética caixa alta, alfabética caixa baixa, romana caixa baixa e romana caixa alta.</p>
+        <ol type="1">
+            <li>Númerica</li>
+        </ol>
+        <ol type="A">
+            <li>Alfabética caixa alta</li>
+            <li>Caixa</li>
+            <li>Alta</li>
+        </ol>
+        <ol type="a">
+            <li>Afabética caixa baixa</li>
+            <li>Alfa</li>
+            <li>Bética</li>
+        </ol>
+        <ol type="I">
+            <li>Romana Caixa Alta</li>
+            <li>Roman</li>
+            <li>Roma</li>
+        </ol>
+        <ol type="i">
+            <li>Romana Caixa baixa</li>
+            <li>Roman</li>
+            <li>Roma</li>
+            <LI>ROM</LI>
+        </ol>
+        <p>Caso eu queria alterar onde a sequência da lista começa, é preciso adicionar o atributo: start="" e em start eu coloco a partir de onde quero que comece.</p>
+        <ol start="100">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+        <p>A mesma lógica vale para algarismos romanos e letras. Se eu colocar em start="5", ele vai começar a partir da quinta letra do alfabeto ou do quinto algarismo romano.</p>
+        <ol type="a" start="5">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ol>
+        <p>Para as UL, eu tenho as opções: disc (o circulo preto), circle (circulo branco) e square (quadrado preto)</p>
+        <ul type="square">
+            <li>square</li>
+            <li>squa</li>
+            <li>are</li>
+        </ul>
+        <ul type="disc">
+            <li>disc</li>
+            <li>mbti</li>
+            <li>eneagrama</li>
+        </ul>
+        <ul type="circle">
+            <li>circle</li>
+            <li>circ</li>
+            <li>circo</li>
+        </ul>
+        <h1>Listas Mistas</h1>
+        <p>Lista mistas são listas dentro de listas:</p>
+        <ol>
+            <li>Listas</li>
+                <ul>
+                    <li>Dentro</li>
+                        <ol type="I">
+                            <li>de 
+                                <ul type="disc">
+                                    <li>listas</li>
+                                </ul>
+                        </ol>
+                </ul>
+        </ol>
+        <p>Um detalhe que esqueci de mencionar: a tag li é autofechável, então não precisa colocar 2 li, basta um só (por mais que o VS CODE automaticamente coloque 2, funciona do mesmo jeito).</p>
+    </main>
+
+
+
+    <footer>
+        <P><a href="elementos1.html">Ver Favicon</a></P>
+        <p><a href="elementos3.html">Ver Simbolos e Emojis</a></p>
+    </footer>
+</body>
+</html>

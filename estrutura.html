@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura DOC HTML</title>
+    <link rel="stylesheet" href="estilopadrao.css">
+</head>
+<body>
+
+    <header>
+        <h1>ESTRUTURA DOC HTML5</h1>
+        <h2>TEMA: DEFINIÇÕES</h2>
+    </header>
+
+
+
+    <main>
+        <div>
+         <ul>
+            <li>Como Declarar Um Documento HTML 5
+            <li>Significado de Cada Tag, atributo e valor</li>
+         </ul>
+        </div>
+        <h1>Como Declarar Um Documento HTML 5</h1>
+        <p>Se for um editor de código, provavelmente ele cria sozinho apenas com 1 comando. No caso do VS CODE, basta digitar ! que ele cria toda a estrutura do documento. Mas, ainda que exista uma forma automática, é importante entender o que significa cada parte.</p>
+        <h2>Significado DOC</h2>
+        <p>Um documento em HTML é composto por 7 tags únicas e, contando com as de fechamento do head e body, são 9:</p>
+        <ul>
+            <li>DOCTYPE</li>
+            <li>HTML</li>
+            <li>Head</li>
+            <li>Meta</li>
+            <li>Meta</li>
+            <li>Title</li>
+            <li>Head de novo, para fechar os metadados</li>
+            <li>body</li>
+            <li>body de novo para fechar o conteúdo</li>
+        </ul>
+        <p>Além disso, algumas dessas tags tem atributos:</p>
+        <ul>
+            <li>Html tem lang=""</li>
+            <li>Meta tem charset=""</li>
+            <li>O segundo meta tem name="" e viewport=""</li>
+        </ul>
+        <h3>DOCTYPE</h3>
+        <p><code>&gt;!DOCTYPE&lt;</code></p>
+        <p>Doctype é uma declaração <strong>(não uma tag)</strong> que declara o tipo e versão do documento HTML. Ela se comunica diretamente com o navegador, "dizendo" que todo o documento é um HTML.</p>
+        <p>Para declarar o HTML, após o <code>&gt;!DOCTYPE&lt;</code> é colocado html.</p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2025-12-29 090021.png" alt="DOCTYPE">
+        <h3>HTML= lang</h3>
+        <p>Essa tag serve para definir e comunicar ao navegador o idioma padrão do documento. Através do atrbuto "lang" se define o valor, ou seja, a sigla do idioma.</p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2025-12-29 090409.png" alt="LANG">
+        <h3>Head</h3>
+        <p>O head é a parte onde são inseridos metadados sobre o site.</p>
+        <h4>Meta charset="UTF-8"</h4>
+        <p>A tag meta é utilizada para inserir metadados no documento. Charset é o atributo que define e informa ao navegador como ler os caracteres devem ser interpretados. UTF-8 é o padrão mais recente que engloba vários caracteres especiais e garatam maior compatibilidade. Sem essa definição, alguns caracteres não são exibidos ou são exibidos de forma quebrada.</p>
+        <h4>meta name e content</h4>
+        <p>Esses 2 atributos são utilizados para manter a responsividade do site.</p>
+        <p>Viewport é toda a área visivel do dispositivo utilizado para ver o site. Ele é relativo, então se adapta aos diferentes tamanhos de área visivel (celulares, tablets, computadores...).
+        </p>
+        <p>Content=width=device-width diz que o site ocupará toda a largura do dispositivo e initial-scale=1.0 que site será carregado em zoom padrão (100%).</p> 
+        <P>Já o </P>
+        <h1>Title</h1>
+        <p>É onde se coloca o nome do site, aquele que aparece na aba.</p>
+        <h1>Body</h1>
+        <p>Em body é onde o site é construído em si. Todo contéudo é criado entre a tag de abertura e fechamento do body</p>
+
+    </main>
+
+
+
+    <footer>
+        <P><a href="definicoes.html">Ver Distinções</a></P>
+        <p><a href="frontback.html">Ver Front x Backend</a></p>
+        <p><a href="oquee.html">Ver O Que É HTML</a></p>
+        <p><a href="semanticahtml.html">Ver Semnântica</a></p>
+    </footer>
+
+</body>
+</html>

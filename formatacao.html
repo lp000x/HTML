@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Texto</title>
+    <link rel="stylesheet" href="estilopadrao.css">
+</head>
+<body>
+    
+     <header>
+        <h1>FORMATAÇÃO DE TEXTO</h1>
+        <h2>TEMA: TEXTO</h2>
+    </header>
+
+
+
+    <main>
+        <div>
+         <ul>
+            <li>Negrito</li>
+            <li>Itálico</li>
+            <li>Sublinhado
+            <li>Taxado
+            <li>Citações</li>
+            <li>Código e Linha de Código</li>
+         </ul>
+        </div>
+        <h1>É possível adicionar várias formatações em texto em html (não necessariamente em CSS). Para que elas sejam aplicadas de acordo com a semântica HTML, é preciso que seu uso faça sentido dentro de seu contexto:</h1>
+        <h2><strong>Strong</strong></h2>
+        <p>A tag <code>strong</code> aplica a o mesmo efeito do <cpde>negrito</cpde>, aumentando a espessura da letra. Seu uso, semânticamente, é dado quando o objetivo é enfatizar ou destacar uma palavra, seja ao dizer que algo é <strong>muito importante</strong> ou naquele recuros que destaca em titulos e paragrafos as palavras utilizadas pelo usuário na barra de pesquisa (dentre outros exemplos). Sua versão não semantica é apenas b.</p>
+        <h2><i>Itálico</i></h2>
+        <p>A tag <code>i</code> adiciona o efeito <i>italico</i>. No geral, é uma tag utilizada para expressar termos cientificos, pensamentos ou palavras estrangeiras.</p>
+        <p>Sua versão não semântica é <em>em</em>.</p>
+        <h2><u>Sublinhado</u></h2>
+        <p>Muito dificil de ser usado, mas seu uso é feito com u (semântico).</p>
+        <h2>Taxado</h2>
+        <p>Mais dificil ainda de ser utilizado, mas o é quando um conteúdo não mais relevante é mantido, seu uso é com "s".</p>
+        <h2>Citações</h2>
+        <p>Citações tem 2 tipos:</p>
+        <ul>
+            <li>Frases Curtas (quotes)</li>
+            <li>Frases longas (blockquote)</li>
+        </ul>
+        <p>As citações curtas usam apenas q.</p>
+        <q>Não é justo aquele que julga às pressas, ou usa da violência; o sábio serenamente considera o que é certo e o que é errado.</q> <p>- Buda</p>
+        <p>Já as citações mais longas usam a tag blockquote</p>: <blockquote>Nossa existência é transitória como as nuvens do outono. Observar o nascimento e a morte do ser é como olhar os movimentos da dança.Uma vida é como o brilho de um relâmpago no céu. Levada pela torrente montanha abaixo.</blockquote>.
+        <p>Ainda nessa tag, eu posso fazer o seguinte:</p>
+            <pre>
+                <code>&gt;blockquote&lt;
+                    &gt;p&lt;Frase&gt;/p&lt;
+                    &gt;cite&lt;nome do autor&gt;/cite&lt;
+                &lt;/blockquote&gt;</code>
+            </pre>
+            <blockquote>
+                <p>Já as citações mais longas usam a tag blockquote</p>: <blockquote>Nossa existência é transitória como as nuvens do outono. Observar o nascimento e a morte do ser é como olhar os movimentos da dança.Uma vida é como o brilho de um relâmpago no céu. Levada pela torrente montanha abaixo</p>
+                <cite>Buda</cite>
+            </blockquote>
+            <h2>Code e Linha de Código</h2>
+            <p>Caso eu queira diferenciar um <code>código</code> de uma palavra qualquer, eu posso usar a tag code. Caso eu queira mostrar uma linha de código, eu uso pre.</p>
+    
+
+    </main>
+
+
+
+    <footer>
+        <P><a href="titulo.html">Ver Titulos</a></P>
+        <a href="fontes.html"><p>Ver Fontes</p></a>
+    </footer>
+
+
+</body>
+</html>
