@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outro Fundo</title>
+
+    <style>
+
+        body{
+            height: 100vh;
+            background-color: black;
+            background-image: url(exercicios/imagens/wallpaper002.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: auto;
+        }
+
+        main{
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid blueviolet;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h1>Tamanho Da Imagem de fundo</h1>
+        <p>Essa imagem de fundo tem um problema: ela não tem o mesmo tamanho do body do site. Isso faz com que ela sempre fique cortada ou, caso eu force a adaptação (com background-size 100% 100%), ela vai se distorcer, causando uma péssima experiência visual para o usuário.</p>
+        <h2>Background-position: contain;</h2>
+        <p>Contain exibe a imagem em seu tamanho normal, sem cortes e sem ampliações. Isso garante a "integridade" original da imagem, mas a custo de não se adaptar aos diferentes tamanhos de tela.</p>
+        <h2>Background-position: cover;</h2>
+        <p>O cover faz o contrário de contain: ele exibe a imagem em 100% do viewport disponível, mesmo que faça cortes na imagem para consegui mostrar. Essa propriedade consegue deixar a imagem dinâmica, se adaptando a diferentes tamanhos de tela e removendo as tarjas pretas que ficam.</p>
+    </main>
+</body>
+</html>
