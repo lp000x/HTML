@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundos</title>
+
+    <style>
+
+        .quadrado{
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+            display: inline-block;
+            border-radius: 20px;
+            background-color: blueviolet;
+        }
+
+        div#q1{
+            background-color: black;
+        }
+
+        div#q2{
+            background-image: linear-gradient(to top, blue, blueviolet);
+        }
+
+        div#q3{
+            background-image: url(exercicios/imagens/pattern001.png);
+        }
+
+        div#q4{
+            background-image: url(exercicios/imagens/wallpaper002.jpg);
+        }
+
+        body{
+            background-image: url(exercicios/imagens/xbox.jpg);
+        }
+
+        main > p, h1, ul{
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IMAGENS DE FUNDO</h1>
+    </header>
+
+
+
+
+    <main>
+
+        <div class="quadrado" id="q1">
+
+        </div>
+
+        <div class="quadrado" id="q2">
+
+        </div>
+
+        <div class="quadrado" id="q3">
+
+        </div>
+
+        <div class="quadrado" id="q4">
+
+        </div>
+        <p>Como deu para ver nessa ultima imagem, não teve ajuste nenhum, apenas cortou a imagem para caber dentro do espaço da div.</p>
+        <p>Para adicionar um gradiente, se usa background-image: linear-gradient. Para adicionar uma imagem, se usa background-image: url.</p>
+        <ul>
+            <li>Para adicionar gradiente, se usa background-image com "linear-gradient";</li>
+            <li>Para adicionar imagens, se usa background-image com url();</li>
+        </ul>
+        <h1>Relembrando...</h1>
+        <p>Cuidado com o tamanho da imagem (em relação ao peso dela), porque imagens pesadas deixam o site lento, ocupam mais espaço no servidor (o que pode custar mais no amontado final de arquivos) e fazem que o site seja penalizado nos resultados de buscas (afinal, ninguém gosta de site lento).</p>
+    </main>
+
+
+
+
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
