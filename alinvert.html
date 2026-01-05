@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+
+    <style>
+
+        #container{
+            width: 400px;
+            height: 300px;
+            background-color: blueviolet;
+            background-image: url(exercicios/imagens/target001.png);
+            position: relative;
+            background-size: 100%;
+
+        }
+
+        #conteudo{
+            height: 100px;
+            width: 200px;
+            background-color: blue;
+            background-image: url(exercicios/imagens/target001.png);
+            background-size: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <article id="container">
+        <section id="conteudo">
+
+        </section>
+    </article>
+
+    <h1>Alinhamento Vertical</h1>
+    <p>O alinhamento vertical precisa de 2 elementos: um container e o conteúdo. O container tem posicionamento relativo (position: relative), enquanto que o conteudo tem posicionamento absoluto (position: absolute). Definindo essas 2 coisas, eu crio um campo (container) onde o conteúdo tem um espaço fixo para se mover.</p>
+    <p>Para centralizar, eu defino left 50% e top 50%, mas ainda assim, não vai centralizar:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 091602.png" alt="lt">
+    <p>Para fazer com que fique centralizado, eu preciso usar a propriedade <code>transform</code> (no conteudo), sendo seus valores translate(-50%, -50%). Translate tem valores em positivo e negato (- e +):</p>
+    <ul>
+        <li>Sinal de menos (-) move para a esquerda e/ou cima (primeiro valor de translate esquerda e segundo cima)</li>
+        <li>Sinal de mais (+) mova para a direita e/ou baixo (primeiro valor de translate direito e segundo baixo) </li>
+    </ul>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 092259.png" alt="top">
+
+</body>
+</html>

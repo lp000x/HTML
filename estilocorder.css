@@ -1,0 +1,352 @@
+@charset "UTF-8";
+
+/* REFATORANDO MEU CÓDIGO*/
+
+/* PRIMEIRA COISA: CSS EXTERNO EM VEZ DE INTERNO
+
+/* MEU CÓDIGO 
+
+ <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+        #art1{
+            background-image: url(exercicios/imagens/background001.jpg);
+            height: 900px;
+           background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #art2{
+            background-image: url(exercicios/imagens/background002.jpg);
+            height: 900px;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        body{
+            margin: 0px;
+        }
+
+        header{
+            background-color: black;
+            height: 250px;
+            width: 100%;
+        }
+
+        header > h1{
+            font-family: Passion One;
+            color: white;
+            text-align: Center;
+            padding-top: 20px;
+            font-size: 10vw;
+            margin: 0px;
+            font-variant: small-caps;
+        }
+
+
+        header > h2{
+            margin: 0px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        h2 > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        h2 > a:hover{
+            text-decoration: underline;
+        }
+
+        p{
+            font-family: Sriracha;
+            font-size: 40px;
+            margin-bottom: 0px;
+        }
+
+        #sec1{
+            width: 42%;
+            padding: 30px
+        }
+
+        section > p{
+            background-color: rgba(0, 0, 0, 0.66);
+            padding: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+            color: white;
+            margin-bottom: 0px;
+        }
+
+            #sec2{
+            width: 42%;
+            padding: 30px
+        }
+
+        .p{
+            padding: 30px;
+        }
+
+        footer{
+            background-color: black;
+            height: 50px;
+        }
+
+        footer > p{
+            color: white;
+            font-size: 16px;
+            font-family: Montserrat;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        p > a{
+            text-decoration: none;
+            color: white;
+        }
+
+        p > a:hover{
+            text-decoration: underline;
+        }
+
+        .box{
+            box-shadow: 1px 1px 15px black inset;
+        }
+
+        head, body{
+            min-height: 100vh;
+            background-color: gray;
+        }
+
+
+
+    </style>
+*/
+
+/* SEGUNDA COISA: ADICIONAR FONTES EM ROOT E DEFINIÇÃO DE VALORES GLOBAIS*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+:root{
+    --font1: Sriracha;
+    --font2: Passion One;
+    --font3: Arial;
+    --font4: Montserrat;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* TERCEIRA COISA: CONSTRUÇÃO*/
+
+/* ________________________________________HEADER____________________________________________________*/
+Header{
+    background-color: black;
+    /*Não precisa usar o height para criar espaçamento, o padding no h1 e h2 (ou p) já é o bastante.
+    Width também não tem necessidade.*/
+}
+
+header > h1{
+    font-family: var(--font2);
+    /*Aqui é o momento que eu uso o variavel em vez do nome da fonte*/
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+    /*No site do Guanabra, a fonte se adapta ao tamanho da tela. Eu pensei que a forma para isso era colocar alguma fonte relativa, e realmente é. Apesar de não ser a melhor das soluções (segundo o próprio Guanabara), funciona também. Para criar uma fonte de tamanho relativa, eu uso a medida vh (Viewport Width*/
+    font-size: 5vw;
+    /*Outra coisa que não consegui fazer é deixar as 2 primeiras letras (C e M) em letra maisucula. Tentei usar o pseudoelemento firtsletter, até funcionou, mas apenas para o C. Para aplicar esse feito, é necessário usar o FONT-VARIANT: SMALL-CAPS; escrevendo todas as letras em minusculo, exceto o C e m*/
+    font-variant: small-caps;
+}
+
+header > p{
+    /* Não tem necessidade de aplicar margin aqui, especialmente 0, uma vez que margin 0 já foi aplicado como valor global do site.*/
+    /* Outra coisa é que o Guanabara usou P em vez de H2. E realmente fica melhor, pois P tem um weight menor que H2, ajudando a destacar o link sem usar weight com valores muito grandes*/
+    padding-bottom: 50px;
+    text-align: center;
+    font-family: var(--font3);
+    color: white;
+
+}
+
+/* COMO EU FIZ O HEADER:
+header{
+            background-color: black;
+            height: 250px;
+            width: 100%;
+        }
+
+        header > h1{
+            font-family: Passion One;
+            color: white;
+            text-align: Center;
+            padding-top: 20px;
+            font-size: 10vw;
+            margin: 0px;
+            font-variant: small-caps;
+        }
+
+
+        header > h2{
+            margin: 0px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding-bottom: 30px;
+        }*/
+/* ________________________________________LINKS (ANCORAS)__________________________________________*/
+/* COMO EU FIZ
+        h2 > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        h2 > a:hover{
+            text-decoration: underline;
+        }
+
+            p > a{
+            text-decoration: none;
+            color: white;
+        }
+
+        p > a:hover{
+            text-decoration: underline;
+        }*/
+    
+    a{
+        /*Como eu vou aplicar as exatas mesmas configurações em todas as ancoras, não precisa fazer separação. Dessa forma, eu consigo o mesmo resultado com menos linhas de código.*/
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+        font-family: var(--font4);
+    }
+    
+    a:hover{
+        /* Inclsuive para o hoover:*/
+        text-decoration: underline;
+    }
+
+/* _____________________________________________FOOTER_______________________________________________*/
+/* COMO EU FIZ
+        footer{
+            background-color: black;
+            height: 50px;
+        }
+
+        footer > p{
+            color: white;
+            font-size: 16px;
+            font-family: Montserrat;
+            text-align: center;
+            padding-top: 15px;
+        }*/
+
+footer{
+    background-color: black;
+    /*Novamente, não precisa adicionar height, o padding do P já faz isso ao mesmo tempo que centraliza.*/
+}
+
+footer > p{
+    color: white;
+    /* Se o tamanho padrão da fonte do size é 16px, então não tem necessidade de definir um tamanho de 16px: font-size: 16px; Posso simplesmente não dicionar font-size*/
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+    
+/* _____________________________________________MAIN_______________________________________________*/
+/* COMO EU FIZ
+                p{
+            font-family: Sriracha;
+            font-size: 40px;
+            margin-bottom: 0px;
+        }
+
+        #sec1{
+            width: 42%;
+            padding: 30px
+        }
+
+        section > p{
+            background-color: rgba(0, 0, 0, 0.66);
+            padding: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+            color: white;
+            margin-bottom: 0px;
+        }
+
+            #sec2{
+            width: 42%;
+            padding: 30px
+        }
+
+        .p{
+            padding: 30px;
+        }
+       
+            #art1{
+            background-image: url(exercicios/imagens/background001.jpg);
+            height: 900px;
+           background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #art2{
+            background-image: url(exercicios/imagens/background002.jpg);
+            height: 900px;
+            background-size: cover;
+            background-attachment: fixed;
+        } */
+
+        /*PRIMEIRA COISA: NÃO TEM NECESSIDADE DE USAR ARTICLE, BASTA SECTION. EU ADICIONEI OS 2 PORQUE ACHEI QUE SERIA NECESSÁRIO PARA APLICAR O PARALAX, MAS NÃO É. DÁ PARA ADICIONAR O BACKGROUND IMAGE NA PRÓPRIA SECTION */
+
+
+    section{
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        padding-left: 30px;
+    }
+    
+    #sec1{
+        background-image: url(exercicios/imagens/background001.jpg);
+        background-attachment: fixed;
+    }
+
+    #sec2{
+        background-image: url(exercicios/imagens/background002.jpg);
+        background-attachment: fixed;
+
+    }
+
+    section > p{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.534);
+        line-height: 2em;
+        width: 45%;
+        font-size: 3vw;
+        font-family: var(--font1);
+    }
+
+    .p{
+        background-color: white;
+        color: black;
+        font-size: 3vw;
+        font-family: var(--font1);
+        padding-left: 30px;
+    }
+
+
