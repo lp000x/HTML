@@ -324,6 +324,7 @@ footer > p{
     #sec1{
         background-image: url(exercicios/imagens/background001.jpg);
         background-attachment: fixed;
+        background-position: center right;
     }
 
     #sec2{
