@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização de Colunas</title>
+
+        <style>
+
+        table{
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        td, th{
+            border: 1px solid black;
+            text-align: center;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        td{
+            font-weight: bold;
+        }
+
+        .eixo{
+            background-color: blue;
+        }
+
+        .eco{
+            background-color: black;
+
+        }
+
+        .nexo{
+            background-color: blueviolet;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estilização de Colunas</h1>
+    <p>Caso eu queira estilizar uma coluna em especifico, ou colocar um estilo diferente para cada uma, eu tenho que criar uma class e aplicá-la sobre cada item da coluna. Em tabelas pequenas isso até é possível, mas e em tabelas com dezenas ou centenas (ou mesmo milhares) de linhas?</p>
+
+        <table>
+            <colgroup>
+            <col class="eixo">
+            <col class="eco" span="3">
+            <col class="nexus">
+            </colgroup>
+
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+            <td>A4</td>
+        </tr>
+        <tr>
+            <td>B1</td>
+            <td>B2</td>
+            <td>B3</td>
+            <td>A4</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <td>C3</td>
+            <td>A4</td>
+        </tr>
+        <tr>
+            <td>D1</td>
+            <td>D2</td>
+            <td>D3</td>
+            <td>A4</td>
+        </tr>
+    </table>
+
+    <p>Para fazer isso, o HTML trouxe uma tag nova: colgroup. Essa tag seleciona todas as colunas de uma tabela automaticamente.</p>
+
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-08 085947.png" alt="">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-08 085956.png" alt="">
+
+    <p>Existe ainda um outro recurso: <code>span</code></p>
+    <p>O Span="" me permite "expandir" a estilização de uma coluna, fazendo com que a próxima adquira a mesma estilização. Na verdade, o valor que eu colocar entre aspas é a quantidade de colunas que vão adquirir a mesma estilização <strong>(eco aqui é a segunda coluna)</strong>:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-08 090143.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-08 090150.png">
+    <br>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-08 090205.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-08 090211.png">
+    
+</body>
+</html>

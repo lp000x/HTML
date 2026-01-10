@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+
+        table{
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        td, th{
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        td{
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Tabela Completa Formatada</h1>
+    
+    <h2>Scope: groups</h2>
+    <p>Para definir um scope que está mesclado, é preciso utilizar o colgroup (se for coluna) ou rowgroup (se for linhas). Por exemplo, na tabela abaixo "Nome" é o titulo de apenas 1 coluna, mas "Filme" é um titulo para 3 colunas. No caso do "Filme", é preciso usar o colgroup, pois se eu usar apenas "col" vai contabilizar só a primeira das três colunas. A mesma coisa para "Mulheres" e "Homens", é preciso usar rowgroup.</p>
+    <ul>
+        <li>Se a mesclagem de um th estiver abrangendo mais de 1 coluna ou mais de 1 linha, se usa scope="...group", pois é um grupo de colunas ou linhas que esse th está abrangendo</li>
+        <li>Porém se tiver mesclagem mas ela continuar apontando só para 1 linha ou coluna, se usa o scope normal</li>
+    </ul>
+
+
+    <table>
+        <tr>
+            <th scope="col">Grupo</th>
+            <th scope="col">Nome</th>
+            <th colspan="3" scope="colgroup">Filme</th>
+        </tr>
+        <tr>
+            <th rowspan="3" scope="rowgroup">Mulheres</th>
+            <td>Beatriz</td>
+            <td>Inception</td>
+            <td>Toy Story</td>
+            <td>Ultron</td>
+        </tr>
+        <tr>
+            <td>Joana</td>
+            <td>Hulk</td>
+            <td>Blair</td>
+            <td>Gray</td>
+           
+        </tr>
+        <tr>
+            <td>Mary Quem</td>
+            <td>Nande</td>
+            <td>Nanatsu</td>
+            <td>River</td>
+          
+        </tr>
+        <tr>
+            <th rowspan="3" scope="rowgroup">Homens</th>
+            <td>Gon</td>
+            <td>Breaking Bad</td>
+            <td>5050</td>
+            <td>Nave</td>
+        </tr>
+        <tr>
+            <td>Geto</td>
+            <td>Jujutsu</td>
+            <td>Naruto</td>
+            <td>One Kick Man</td>
+            
+        </tr>
+        <tr>
+        
+            <td>Boslonarium</td>
+            <td>Lula</td>
+            <td>Eleioções</td>
+            <td>Elite</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

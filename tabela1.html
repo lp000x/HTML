@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+
+td{
+    border: 1px solid black;
+    padding: 10px;
+ }
+
+table{
+    width: 500px;
+    border-collapse: collapse;
+}
+
+.tableali{
+    width: 400px;
+    height: 400px;
+}
+
+.alitd{
+    vertical-align: top;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Hierarquia de Tabelas</h1>
+    <p>Todas as tabelas em HTML seguem uma hierarquia:</p>
+    <ul>
+        <li>TABELA (table)</li>
+        <li>TABELA > Linha de Tabela (table row)</li>
+        <li>Tabela > linha de tabela > cabeçalho (table header)</li>
+        <li>Tabela > linha de tabela > cabeçalho (table header) > dados da tabela (table data)</li>
+    </ul>
+    <p>Ou seja:</p>
+    <ul>
+        <li>Tabela é o principal e geral</li>
+        <li>Linhas de tabela delimitam as linhas horizontas da table (o segundo elemento)</li>
+        <li>Cabeçalho da tabela</li>
+    </ul>
+    <p>Tags da tabela:</p>
+    <ul>
+        <li><code>table</code>: adiciona a própria tabela</li>
+        <li><code>tr</code>: adiciona as linhas horizontais da tabela (tr = table row)</li>
+        <li><code>td</code>: adiciona os dados desejados (td = table data)</li>
+    </ul>
+
+    <h1>Teste de Tabelas</h1>
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+        </tr>
+            <tr>
+            <td>B1</td>
+            <td>B2</td>
+            <td>B3</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>D1</td>
+            <td>D2</td>
+            <td>D3</td>
+        </tr>
+    </table>
+    <p>Semanticamente, em HTML, essa é a tabela. Não está com "cara de tabela", pois isso se faz em CSS.</p>
+    <h1>ESTILIZAÇÃO DA TABELA</h1>
+    <p>Essa daqui é uma tabela no Google Planilhas:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 130534.png" alt="Spreed">
+    <p>Vou refazer passo a passo em HTML E (e atenção nesse "E", porque a tabela tem uma parte em HTMLe outra em CSS) CSS.</p>
+    <h2>PASSO 1: Tag Table</h2>
+    <p>O primeiro passo é adicionar a tag table, pois é ela que vai delimitar onde é o que:</p>
+    <table>
+
+    </table>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 130749.png" alt="tag">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 130806.png" alt="res" style="border: 1px solid black;">
+    <p>Até agora, não mudou nada, afinal a tag table apenas marca (markup) que ali vai ter uma tabela. </p>
+    <h2>Passo 2: Linhas (table row)</h2>
+    <p>São 4 linhas (A, B, C e D), então são 4 table rows (tr), adicionadas com a tag tr</p>
+    <table>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </table>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 131033.png" alt="tr">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 131040.png" alt="resu" style="border: 1px solid black;">
+    <p>Novamente, nada mudou, pois assim como table, o tr é estrutura e não conteúdo. </p>
+    <h2>Passo 3: Inserindo Dados</h2>
+    <p>Nesse exemplo passo a passo, os dados são A, B, C e D, cada um deles do 1 ao 3. Para inserir os dados, vou usar a tag td (que significa table data):</p>
+        <table>
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+        </tr>
+        <tr>
+            <td>B1</td>
+            <td>B2</td>
+            <td>B3</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>D1</td>
+            <td>D2</td>
+            <td>D3</td>
+        </tr>
+    </table>
+    <p>Agora sim algo apareceu, pois adicionei conteúdo (dados, data)</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 131439.png" alt="td">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 131524.png" alt="resul" style="border: 1px solid black;">
+    <p>Mas ainda falta algo: parecer uma tabela. Até agora ela uma table em estrutura, mas não em estilo. O próximo passo é com CSS.</p>
+    <h2>Passo 4: Estilização</h2>
+    <p>Agora sim, uma tabela. Ou quase...</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 131905.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 131929.png">
+    <h2>Passo 5: Propriedade Nova</h2>
+    <p>Para realmente ficar como uma tabela, posso usar a propriedade border-collapse: collapse. Essa propriedade retira todo o espaço entre as bordas, como se todos os espaços onde vão os dados compartilhassem as mesmas bordas:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 132132.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 132138.png">
+    <h2>Estilização geral</h2>
+    <p>Uma vez entendendo a hieraquia e qual tag selecionada no CSS altera qual coisa na tabela, eu posso fazer o que quiser:</p>
+    <ul>
+        <li>tr selecionado no css vai alterar toda a linha horizontal;</li>
+        <li>td vai alterar todos os dados (ou seja, todos os quadrados) ou apenas aquele que eu selecionar com class ou id;</li>
+        </ul>
+        <h2>Adicionais</h2>
+        <ul>
+            <li>Se a tabela não for construida seguindo a hierarquia, qualquer dado vai aparecer antes ou depois da tabela</li>
+            <li>td e tr não precisam da tag de fechamento (assim como li)</li>
+        </ul>
+
+        <h1>Alihamento Vertical</h1>
+        <table class="tableali">
+            <tr class="alitr">
+                <td class="alitd">A1</td>
+                <td class="alitd">A2</td>
+                <td class="alitd">A3</td>
+                <td class="alitd">A4</td>
+            </tr>
+            <tr class="alitr">
+                <td class="alitd">B1</td>
+                <td class="alitd">B2</td>
+                <td class="alitd">B3</td>
+                <td class="alitd">B4</td>
+            </tr>
+            <tr class="alitr">
+                <td class="alitd">C1</td>
+                <td class="alitd">C2</td>
+                <td class="alitd">C3</td>
+                <td class="alitd">C4</td>
+            </tr>
+            <tr class="alitr">
+                <td class="alitd">D1</td>
+                <td class="alitd">D2</td>
+                <td class="alitd">D3</td>
+                <td class="alitd">D4</td>
+            </tr>
+        </table>
+        <p>O <code>text-align</code> faz o alinhamento horizontal:</p>
+        <p><code>text-aling: center</code></p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 153701.png">
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 153523.png" style="width: 200px; height: 200px;">
+
+        <p><code>text-aling: left</code></p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 153555.png">
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 153651.png" style="width: 200px; height: 200px;">
+
+        <p><code>text-aling: right</code></p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 153546.png">
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 153539.png" style="width: 200px; height: 200px;">
+        <h1>Vertical-align</h1>
+        <p>Caso eu precise fazer o alinhamento vertical, eu utilizo a propriedade:</p>
+        <ul>
+            <li><code>vertical-align: bottom;</code> (baixo)</li>
+            <li><code>vertical-align: top;</code> (cima)</li>
+            <li><code>vertical-align: middle;</code> (meio)</li>
+        </ul>
+        <p>vertical-align: bottom</p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 154938.png">
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 154312.png">
+
+        <p>vertical-align: middle</p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 154240.png">
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 154255.png">
+
+        <p>vertical-align: top</p>
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 154944.png">
+        <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 154329.png">
+
+</body>
+</html>

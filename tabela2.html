@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELAS GRANDES</title>
+
+    <style>
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: black;
+        }
+        td, th{
+            border: 1px solid black;
+ 
+        }
+
+        th{
+            background-color: gray;
+            color: white;
+        }
+
+        .position{
+            text-align: center;
+        }
+
+        .popu{
+            text-align: right;
+        }
+        
+        caption{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabelas Grandes</h1>
+    <p>O modelo anterior de tabela é simples e funciona, mas existe outro modelo mais completo com sua própria hierarquia:</p>
+    <ul>
+        <li>Tabela</li>
+        <ul>
+            <li>Caption</li>
+            <li>Table Head</li>
+            <ul>
+                <li>td, th e tr</li>
+            </ul>
+
+            <li>Table Body</li>
+            <ul>
+                <li>td, th e tr</li>
+            </ul>
+
+            <li>Table footer</li>
+            <ul>
+                <li>td, th e tr</li>
+            </ul>
+        </ul>
+    </ul>
+    <p>O caption é o nome da legenda, ficando acima da tabela, por isso ele não recebe nem tr e nem td, apenas texto</p>
+    <p>Para adicionar o body, head e footer na tabela:
+        <ul>
+            <li>Body = tag <code>tbody</code></li>
+            <li>head = tag <code>thead</code></li>
+            <li>footer = tag <code>tfoot</code></li>
+        </ul>
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Posição</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Populção</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <caption>Populações Das Cidades</caption>
+            <tr>
+                <td class="position">1</td>
+                <td>São Paulo</td>
+                <td class="popu">11.400.000</td>
+            </tr>
+            <tr>
+                <td class="position">2</td>
+                <td>Rio de Janeiro</td>
+                <td class="popu">6.000.000</td>
+            </tr>
+            <tr>
+                <td class="position">3</td>
+                <td>Brasilia</td>
+                <td class="popu"> 2.800.000</td>
+            </tr>
+            <tr>
+                <td class="position">4</td>
+                <td>Fortaleza</td>
+                <td class="popu">2.400.000</td>
+            </tr>
+            <tr>
+                <td class="position">5</td>
+                <td>Salvador</td>
+                <td class="popu">2.400.000</td>
+            </tr>
+            <tr>
+                <td class="position">6</td>
+                <td>Belo Horizonte</td> 
+                <td class="popu">2.300.000</td>
+            </tr>
+            <tr>
+                <td class="position">7</td>
+                <td>Manaus</td>
+                <td class="popu">2.000.000</td>
+            </tr>
+            <tr>
+                <td class="position">8</td>
+                <td>Curitiba</td>
+                <td class="popu">1.700.000</td>
+            </tr>
+            <tr>
+                <td class="position">9</td>
+                <td>Recife</td>
+                <td class="popu">1.400.000</td>
+            </tr>
+            <tr>
+                <td class="position">10</td>
+                <td>Goiânia</td>
+                <td class="popu">1.400.000</td>
+            </tr>
+            
+        </tbody>
+
+        <tfoot>
+            <tr class="popu">
+                <th scope="row">Total de Habitantes</th>
+                <td></td>
+                <td><strong>33.800.000</strong></td>
+            </tr>
+
+        </tfoot>
+    </table>
+    <h2>td X th: Quando Usar</h2>
+    <p>Considerando a semântica do HTML 5, próprio nome das tags sugerem seu uso. O que significa "td" e "th"? O "t" significa table, "d" data (dado) e "h" head. Logo:</p>
+    <ul>
+        <li>td: uso sempre que se tratar de uma informação, um dado</li>
+        <li>th: uso sempre que for nomear uma coluna (ou linha) que, a partir dela, virão varios dados.</li>
+    </ul>
+    <h2>Titulos de Colunas E de Linhas</h2>
+    <p>Caso eu queira informar que, utilizando a tabela que criei como exemplo, que "Estado", "Posição" e "População" estão como titulos de tudo que vem abaixo deles, eu uso, na tag de abertura do th, eu uso o atributo:</p>
+    <ul>
+        <li>scope="col"</li>
+    </ul>
+    <p>Para titulos horizontais (como o total de habitantes, que indica a linha ao lado):</p>
+    <ul>
+        <li>scope="row"</li>
+    </ul>
+    <h3>Para Que Isso Serve?</h3>
+    <p>Definir o scope (ou seja, se um th é um titulo de uma coluna ou de uma linha) não interfere em nada para o usuário, mas ajuda muito os navegadores a interpretar a tabela e realizar calculos coerentes.</p>
+    <h1>Efeito Zebrado</h1>
+    <p>Um problema muito comum ao ler essas tabelas (especialmente as grandes e de letras pequenas) é se confundir uma célula debaixo com uma de cima. Para isso, se usa o efeito zebrado, criando um padrão de cor que facilite a leitura.</p>
+    <p>Em CSS, se usa uma pseudoclasse para aplicar o efeito zebrado de forma rápida e sem a necessidade de aplicar um a um:</p>
+    <ul>
+        <li>tbody > tr:nth-child(--)</li>
+    </ul>
+    <p>Dentro do parenteses, eu posso colocar um valor númerico ou em palavra. Caso eu coloque uma valor númerico, preciso colocar um n à sua frente (2n), (3n), (7n). Na tabela, a quantidade de números que eu colocar dentro de parenteses é a quantidade de linhas que serão puladas e, então, adicionado o background-color. Caso eu queira usar palavras:</p>
+    <ul>
+        <li>odd: adiciona o efeito em células impares</li>
+        <li>even: adiciona o efeito em células pares</li>
+    </ul>
+    <p>Outra possibilidade é mesclar: por exemplo, faço 2 pseuclasses, em uma eu uso odd e aplico uma cor e na outra eu aplico even e adiciono outra cor.</p>
+    <p>Apesar de ter usado como exemplo o background-color, qualquer outro elemento (desde que compativel) pode ser utilizado.</p>
+    <h1>Cabeçalho Fixo</h1>
+    <p>Em tabelas muito grandes (com muitos dados), em determinado momento acontece a rolagem e o th (o titulo das colunas) fica lá para cima. Existe uma forma de fazer com que ele role para baixo também, apesar de não valer para todos os navegadores.</p>
+    <h2>Como Aplicar</h2>
+    <p>Primeiro, a tabela (table) precisa estar com position: relative</p>
+    <p>É necessário também selecionar no css o th, indicando seu caminho (thead > tr > th), colocando nele o position: sticky e também top: 0;</p>
+    <p>Essas 2 alterações vão fazer apenas com que as palavras acompanhem a rolagem, sem configuração de background-color. Para resolver isso, basta colocar (ainda no thead > tr > th) a mesma cor do background-color</p>
+   
+
+    
+</body>
+</html>

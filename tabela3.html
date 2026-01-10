@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem</title>
+    <style>
+
+        table{
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem</h1>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td colspan="3">3</td>
+            <td style="width: 100px;"></td>
+           
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+    </table>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 170932.png">
+    <p>Tirei o 4 da primeira linha e quero mesclar o 3, ou seja, fazer o 3 ocupar também o lugar do 4. Como fazer isso?</p>
+    <p>Para isso, seu usa a expansão:</p>
+    <ul>
+        <li>colspan="x"</li>
+    </ul>
+    <p>Dentro das aspas, eu coloco o número de colunas que o td em questão (ou th) vai ocupar. Se eu colocar 2, estou dizendo que vai ocupar 2 colunas, se colocar 3, 3 colunas, e por ai vai. <strong>Colunas</strong> não <strong>linhas</strong>.
+    </p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 171307.png">
+    <p>Se eu colocar, nesse exemplo, o valor de 3 (para ocupar 3 colunas), vai se manter em 2, pois não há uma terceira coluna nessa tabela. Para que isso seja possível, eu preciso adicionar mais uma, seja na tr debaixo ou na própria:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 171549.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-05 171625.png">
+    <h1>rowspan</h1>
+    <p>É possível também fazer uma mesclagem vertical usando o <code>rowspan</code></p>
+     <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="3">2</td>
+            <td style="width: 100px;"></td>
+           
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+
+        </tr>
+
+    <h1>Atenção</h1>
+    <p>É preciso estar ciente de uma coisa: <strong>será mesclada, vertical ou horizontalmente, a linha do td que eu aplicar.</strong> Se for no terceiro td da segunda tr, é nele que será aplicado. Se for no primeiro td da ultima tr, será aplicado nela.</p>
+</body>
+</html>

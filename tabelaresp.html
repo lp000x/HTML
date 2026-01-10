@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Responsiva</title>
+
+        <style>
+
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+td, th{
+    border: 1px solid black;
+    padding: 10px;
+ }
+
+table{
+    width: 500px;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
+
+div#container{
+    overflow-x: auto;
+}
+
+</style>
+
+</head>
+<body>
+    
+<caption>Este é um exemplo de tabela responsiva</caption>
+<p>O conteúdo, junto com a tabela, vai ficar com rolagem. Como já deu para perceber até aqui, rolagem é algo a ser resolvido.</p>
+
+    <div id="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                    <td>EXEMPLO</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+
+<p>Para evitar a rolagem de todo o conteúdo, é possível fazer o seguinte:</p>
+<ul>
+    <li>Envelopar a table inteira em uma div</li>
+    <li>Adicionar um id na div</li>
+    <li>No Style, adicionar um estilo de <code>container overflow-x auto</code></li>
+</ul>
+
+<p>overflow signfica "transbordar", o X, no caso dessa tabela, significa uma "transbordagem" horizontal (y = vertical e x = horizontal). E essa propriedade pega o conteúdo que transborda e faz ele caber dentro do container.</p>
+
+<p>A tabela continua com a rolagem, afinal, fazer ela ficar menor ou maior para caber na tela (ou "quebrá-la") comprometeria a visibilidade dos dados, mas todo o restante da tela permanece responsivel.</p>
+
+</body>
+</html>
