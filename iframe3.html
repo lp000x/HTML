@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Local</title>
+
+    <style>
+
+        iframe{
+            display: block;
+            margin: auto;
+            height: 400px;
+        }
+
+        #ex2{
+            width: 95vw;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Inserir Conteúdo Locais</h1>
+
+    <p>Uma outra forma de inserir iframe é usando páginas locais: 
+        
+    <iframe src="execordel.html" frameborder="0"></iframe></p>
+
+    <p><iframe src="tabela5.html" frameborder="0"></iframe></p>
+
+    <h1>Carregando Conteúdos Internos</h1>
+
+    <p>Uma outra possibilidade no uso do iframe é dedicar um espaço na página a ele e colocar links que vão abrir nesse espaço a pagina:</p>
+
+    <ul>
+        <li><a href="ifpgtes2.html" target="frame1">Leon</a></li>
+        <li><a href="ifpgtese3.html" target="frame1">Lawliet</a></li>
+        <li><a href="ifrpgtest.html" target="frame1">Test</a></li>
+    </ul>
+
+    <p><iframe id="ex2" name="frame1" srcdoc="<h1>Escolha uma das opções</h1><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, commodi! Corporis nihil voluptatibus qui tempore, quidem ut iste sequi amet dolorem incidunt ex doloremque unde nisi! Quam provident distinctio officia!</p>"></iframe></p>
+
+    <h1>Srcdoc</h1>
+
+    <p>O srcdoc é um parametro que me permite colocar tags para serem exibidas.</p>
+    
+</body>
+</html>

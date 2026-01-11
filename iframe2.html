@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurando Iframe</title>
+
+    <style>
+
+        iframe{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Configuração Básica de Iframe</h1>
+    <p>A tag do iframe pode ser usado tanto inline como espaçada.</p>
+
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-10 085101.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-10 085136.png">
+
+    <h2>Espaçada</h2>
+
+    <p>Usando a tag iframe espaçada, eu posso adicionar outras coisas no meio. A primeira configuração é adicionar um link, porque caso a dispositivo não tenha compatibilidade com o iframe, um link será exibido em seu lugar.
+
+    <iframe src="https://www.cursoemvideo.com/" frameborder="0">
+        <a href="htpps://www.cursoemvideo.com">Curso em vídeo</a>
+    </iframe>
+
+    </p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-10 085515.png">
+    <p><strong>OBS:</strong> Para o iframe funcionar, ele precisa estar em uma tag p (ou talvez outras tags de texto).</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-10 085917.png">
+    <h2>Altura e Largura</h2>
+    <p>Heigh 500 e width 400</p>
+
+        <p>Usando a tag iframe espaçada, eu posso adicionar outras coisas no meio. A primeira configuração é adicionar um link, porque caso a dispositivo não tenha compatibilidade com o iframe, um link será exibido em seu lugar.
+
+    <iframe src="https://www.cursoemvideo.com/" frameborder="2" height="500px" width="400" scrolling="no">
+        <a href="htpps://www.cursoemvideo.com">Curso em vídeo</a>
+    </iframe>
+    </p>
+    <p>Caso eu faça uma alteração de estilização inline e outra em CSS, no iframe, o que vai se sobrepor são as CSSs.</p>
+
+    <h2>Parametro Novo: Scrolling</h2>
+    <p>Como dá para perceber, tem uma barra de rolagem para exibir páginas com muito conteúdo. Caso eu queria retirar isso, eu posso usar scrolling="no"</p>
+    <ul>
+        <li>Scrolling="yes": permite a rolagem</li>
+        <li>Scrolling="no": não permite a rolagem</li>
+        <li>Scrolling="auto": se tiver muito conteúdo, exibe a rolagem. Se não tiver, não exibe.</li>
+    </ul>
+
+    <h2>Frameborder</h2>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-10 090719.png">
+    <p>O Frameborder são as bordas do iframe, e só aceitam os valores de 0 (sem borda), 1 ou 2 (borda de 1px). Caso eu queira adicionar outro tipo de bordar, posso deixar em 0 e adicionar uma borda normal em CSS.</p>
+
+    
+</body>
+</html>
