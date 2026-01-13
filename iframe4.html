@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inconvenientes do Iframe</title>
+</head>
+<body>
+    
+    <h1>Inconvenientes Do Iframe</h1>
+    <p>Embora muitos dizem que iframe se tornou inutil, ele tem seus lados positivos e negativos.</p>
+
+    <h1>Mecanismos De Buscas</h1>
+    <p>Os Bots que vasculham e analisam os sites para definir qual posição vão estar nos resultados de buscas podem encontrar (não é algo que vai acontecer, é que pode acontecer) dificuldade em indexar a parte do conteúdo em iframe. Então, se uma parte muito importante do meu conteúdo está em iframe e o bot não conseguir indexar, isso pode prejudicar bastante o ranqueamento.</p>
+
+    <h1>Acessibilidade e Usabilidade</h1>
+    <p>Assim como os bots dos buscadores, os softwares que fazem e a leitura de tela para pessoas cegas podem não conseguir acessar o que está em iframe.</p>
+    <p>Os algoritimos também podem não interpretar muito bem certos comandos dentro dos iframes: se a pessoa avança em uma página dentro do site do iframe e deseja voltar, clicar na seta lá de cima vai voltar só o iframe ou a página principal? Se tiver um link com _blank, vai abrir dentro do próprio iframe ou em uma nova aba? </p>
+
+    <h1>Problemas de Segurança</h1>
+    <p>O meu site pode estar seguro, mas se eu usar um site de terceiro que tem problemas de segurança, eu acabo expondo o meu site também.</p>
+
+    <h1>Tornando Iframes Seguros</h1>
+    <form action="cadastro.php" method="get">
+
+        <p>Nome</p>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="enviar">
+
+    </form>
+</body>
+</html>
