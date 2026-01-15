@@ -1,0 +1,50 @@
+    /*Gerais*/
+@media all{
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html, body{
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    h1{
+        color: white;
+        padding: 10px;
+    }
+
+    
+}
+
+    /*Retrato*/
+    @media screen and (orientation: portrait){
+        body{
+            background-color: green;
+            background-image: url(../imagens/cev-portrait.jpg);
+        }
+
+        h1{
+            color: aquamarine;
+        }
+    }
+
+
+    /*Paisagem*/
+    @media screen and (orientation: landscape){
+        body{
+            background-color: blueviolet;
+            background-image: url(../imagens/cev-landscape.jpg);
+            background-position: left bottom;
+
+        }
+
+        h1{
+            color: yellow;
+        }
+    }
