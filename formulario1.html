@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+
+    <h1>Criando Um Formulário Simples</h1>
+    <p>Para criar uma tabela, é usada a tag <code>form</code> espaçada:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 083345.png" alt="fomr">
+    <p>Dentro do espaço entre as tags, eu coloco entre <code>p</code> aquilo que o formulário pedirá. Porém, se eu colocar apenas isso não vai aparaecer a caixa para o usuário digitar. Para isso funcionar, é preciso usar a tag input:text, ela vem com com 3 atributos:</p>
+    <ul>
+        <li>Type: indicando que o tipo do input é de texto</li>
+        <li>name: </li>
+        <li>id: </li>
+    </ul>
+    <form>
+        <p>Nome <input type="text" name="nome" id="name"></p>
+        <p>idade <input type="text" name="nam" id="nom"></p>
+    </form>
+
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 084128.png">
+
+    <h2>Adicionando Um Botão</h2>
+    <p>Falta uma coisa nessa formulário: um botão para o usuário enviar seus dados. Para criar um botão, é muito simples: basta usar novamente a tag input, <code>input:submit</code></p>
+
+    <ul>
+        <li>Type: indicando que o tipo do conteúdo é de texto</li>
+        <li>name: é mais util para identificar no php e HTML</li>
+        <li>id: é mais útil para identificar no java</li>
+    </ul>
+    <form autocomplete="off">
+        <p>Nome <input type="text" name="nome" id="name"></p>
+        <p>idade <input type="text" name="nam" id="nom"></p>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 084515.png" style="margin-top: 10px;">
+
+    <p>O "value" é o texto que vai aparecer dentro do botão.</p>
+
+    <P>Caso eu queira desligar aquele autocomplete que completa automaticamente meus dados, eu posso usar, em frente ao <code>form</code>, o autocomplete: off</P>
+
+    <h1>Para Onde Os Dados Vão</h1>
+    <p>Os dados vão para uma linguagem de programação. Isso é tema para futuros aprendizados, mas para enviar os dados, eu uso o <code>action="cadastro.java"</code>, pode ser java ou qualquer outra linguagem. O action vai ativar quando a pessoa clicar no botão, enviando os dados para onde coloquei entre aspas.</p>
+
+     <form autocomplete="off" action="cadastro.java">
+        <p>Nome <input type="text" name="nome" id="name"></p>
+        <p>idade <input type="text" name="nam" id="nom"></p>
+        <input type="submit" value="Enviar">
+    </form>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 085416.png">
+    <h1>Labels</h1>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 085633.png">
+    <p>Os navegadores não sabem que o espaço para colocar os dados estão ligados ao texto atrás deles. Usar um recurso que estabeleça essa ligação ajuda os navegadores a interpretar que existe um formulário no site.</p>
+    <p>Para criar essa ligação, é utilizada a tag label envelopando apenas a palavra.</p>
+
+     <form autocomplete="off" action="cadastro.java">
+        <p><label for="iname">Nome</label> <input type="text" name="nome" id="iname"></p>
+        <p><label for="inom">Idade</label> <input type="text" name="nam" id="inom"></p>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 090035.png">
+
+    <p>O label vem com o atributo <code>for:""</code>, e é nele que eu coloco o identificar que criará a ligação entre texto e caixa de input. Como dito antes, o <code>input</code> vem com 3 atributos, e um deles é o id. É o id que vou colocar no for</p>
+    
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 090222.png">
+
+    <p>Visualmente, parece que nada mudou. Porém agora existe uma ligação entre o texto e seu input, e uma forma de ver que os navegadores "sabem" disso é passando o mouse ou clicando em cima do texto. Nesse ultimo formulário a caixa é selecionada, enquanto que nos outros (nos quais eu não criei label) não acontece nada.</p>
+
+
+</body>
+</html>

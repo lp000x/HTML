@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+
+    <h1>Segurança Nos Formulários</h1>
+    <p>Apesar de os dados não estarem indo para lugar nenhum, eles são exibidos na URL do navegador:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 091044.png">
+    <p>Para garantir segurança mais avançada, é preciso estudar temas mais avançados (como protocolos), mas em HTML tem duas formas:</p>
+    <ul>
+        <li>Get</li>
+        <li>Post</li>
+    </ul>
+
+    <p>Para utilizar um desses 2, basta usar o atributo <code>method</code> na tag form</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 091700.png">
+
+    <form action="cadastro.java" method="post">
+        <p><label for="iid">Jogo</label> <input type="tel" name="iname" id="iid"></p>
+        <p><label for="oid">VG</label> <input type="text" name="oname" id="oid"></p>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>Get</h2>
+    <p>Por padrão, caso eu não defina nada, get é o padrão. Ou seja, é ele quem exibe os dados na URL.</p>
+    <p><strong>Quando usar get?</strong>Get, por exibir os dados no campo de input, acaba se tornando compartilhavel. Caso o input não peça dados sensiveis, o get pode ser utilizado.</p>
+    <h2>Post</h2>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 091754.png">
+    <p>Quando utilizo o post, os dados inseridos nos forms não são exibidos na URL. Isso significa que os dados estão seguros? Não completamente. De fato, não estão sendo exibidos na URL, mas sem aplicar criptografia, ainda dá para ver os dados.</p>
+    <p>Caso eu abra o inspecionar e vá em rede, eu vou achar o meu action ali. E caso eu clique nele e em payload, lá estão os dados:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 092146.png">
+    <p><strong>Quando usar o Post?</strong>O post é uma opção melhor quando se trata de arquivos e dados sensiveis.</p>
+    <h1>Diferença Na Velocidade</h1>
+    <p>Há um tempo atrás, o uso de Get ou Post influenciava na velocidade do site. Hoje ainda influencia, mas os dispositivos evoluiram ao ponto dela ser imperceptível.</p>
+</body>
+</html>
