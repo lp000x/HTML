@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Elementos Sem Input</h1>
+    <p>Até agora foram apresentados vários e vários elementos, todos partindo do input. Mas existem alguns que funcionam sem ele.</p>
+    <h1>Select</h1>
+    <p>O select é aquele recurso que mostra uma série de opções ao clicar nele.</p>
+    <form action="cadastro.java">
+        <p>
+            <label for="est">Estado</label>
+            <select name="select" id="est">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+
+                <option value="MG">Minas Dos Gerais</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="PE">Pernamcubo</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">      
+        </p>
+    </form>
+    <p>É possível fazer da forma acima, apenas colocando as opções, ou eu posso fazer agrupamentos. Para fazer agrupamentos, eu envelopo todas as opções do mesmo grupo com a tag <code>optgroup</code>, usando também o atributo label</p>
+    <form action="cadastro.java">
+        <p>
+            <label for="est">Estado</label>
+            <select name="select" id="est">
+                <optgroup label="Mais Populosos">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+
+                <optgroup label="Menos Populosos">
+                    <option value="MG">Minas Dos Gerais</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PE">Pernamcubo</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">      
+        </p>
+    </form>
+    <h1>Data List</h1>
+    <p>Caso eu queira fornecer uma lista com dados já definidos para o usuário escolher, mas também oferecer a opção para que ele digite se o que não corresponde existir, eu posso usar input + a tag <code>data list</code></p>
+    <p>Para que funcione, eu preciso adicionar, no input associado a datalist, o atributo <code>list=""</code>, e dentro de list eu colodo o id definido no datalist</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 132909.png">
+    <form action="cadastro.java">
+        <p>
+            <label for="lang">Sua Linguagem</label>
+            <input type="text" name="lan" id="lang" list="list">
+            <datalist id="list">
+                <option value="Java">Java</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+                <option value="Ruby">Ruby</option>
+            </datalist>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">      
+        </p>
+    </form>
+    <h1>Textarea</h1>
+    <p>Para criar um campo onde o usuário pode escrever algo e enviar, eu posso usar a tag <code>textarea</code></p>
+
+    <form action="cadastro.java">
+        <p>
+            <label for="msg">Mensagem</label>
+            <textarea name="mensagem" id="msg"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">      
+        </p>
+    </form>
+    <p>Para alterar o tamho da caixa de mensagem, eu uso os atributos <code>rows=""</code> (quantas linhas vão ter) e <code>cols=""</code> (quantas colunas vão ter).</p>
+
+    <form action="cadastro.java" method="post">
+        <p>
+            <label for="msg">Mensagem</label><br>
+            <textarea name="mensagem" id="msg" rows="10" cols="20"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">      
+        </p>
+    </form>
+    <p><strong>Vale dizer:</strong> rows e cols não definem um limite de caractere, apenas o tamanho do quadro que será exibido.</p>
+    <p><strong>Outra coisa:</strong> ao usar esse recurso de textarea, o ideal é usar o método post, pois ele não tem limite de caracteres, enquanto que o get tem limite de 3000 caracteres</p>
+</body>
+</html>

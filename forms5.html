@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>CheckBox</h1>
+    <p>Checkbox são aqueles elementos que a pessoa pode marcar uma opção.</p>
+
+    <form action="cadastro.java" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Marque Seus Esportes <strong>CHECKED</strong></legend>
+            <input type="checkbox" name="check" id="ch"> <label for="ch">Xadrez</label> <br>
+            <input type="checkbox" name="check2" id="ch2"> <label for="ch2">Power Lift</label> <br>
+            <input type="checkbox" name="check3" id="ch3"> <label for="ch3">Corrida</label> <br>
+            <input type="checkbox" name="check4" id="ch4"> <label for="ch4">Esgrima</label> <br>
+            <input type="checkbox" name="check5" id="ch5"> <label for="ch5">Basquete</label>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    <h1>RADIO</h1>
+    <p>O radio é aquela bolinha que a pessoa pode marcar. Geralmente, quando se usa nesse estilo, é de opção única, mas feito dessa forma simples:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 124854.png">
+    <p>Surgem 2 problemas:</p>
+    <ul>
+        <li>Primeiro: Se eu clicar nos dois circulos, os dois serão marcados</li>
+        <li>Segundo: Se eu clicar para desmarcar, nada acontece</li>
+    </ul>
+    <form action="cadastro.java">
+        <fieldset>
+            <legend>Genero</legend>
+            <input type="radio" name="gen" id="mas2"> <label for="mas2">Masculino</label>
+            <input type="radio" name="gen" id="fem2"> <label for="fem2">Feminino</label>
+        </fieldset>
+    </form>
+    <p>Para o navegador entender que só um pode ser marcado, é preciso que as duas opções estejam no mesmo grupo. E para colocar as duas no mesmo grupo basta colocar o mesmo nome:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 125118.png"> 
+    <h2>Checked</h2>
+    <p>Se eu quiser que uma das opções (ou mais de uma) já esteja marcada, basta adicionar o atributo "checked"</p>
+    <p>O usuário pode desmarcar, mas por definição o navegador já deixa marcado aquele que coloquei checked. E claro, a opção radio não permite mais de 1 checked.</p>
+    <form action="cadastro.java" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Marque Seus Esportes <strong>CHECKED</strong></legend>
+            <input type="checkbox" name="check" id="ch" checked> <label for="ch">Xadrez</label> <br>
+            <input type="checkbox" name="check2" id="ch2"> <label for="ch2">Power Lift</label> <br>
+            <input type="checkbox" name="check3" id="ch3"> <label for="ch3">Corrida</label> <br>
+            <input type="checkbox" name="check4" id="ch4"> <label for="ch4">Esgrima</label> <br>
+            <input type="checkbox" name="check5" id="ch5"> <label for="ch5">Basquete</label>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    <p>Resumo:</p>
+    <ul>
+        <li>Radio: é usado quando somente 1 opção pode ser marcada e todas as opções devem estar com o mesmo <code>name=""</code> (para que o navegador entenda que todos estão no mesmo grupo)</li>
+        <li>Checkbox: é usado quando o usuário pode marcar multiplas opções</li>
+    </ul>
+    <h1>Cores</h1>
+    <p>O input também oferece recursos para o usuário escolher cores.</p>
+
+    <form action="cadastro.java">
+
+        <p>
+            <label for="cor">Cor</label>
+            <input type="color" name="core" id="cor" value="#ffffff">
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    <p>Por padrão, sempre carrega o preto, mas caso eu queira que outra cor seja carregada, basta adicionar o atributo <code>value=""</code> e o código da cor (em hexadecimal, lembrando de colocar a # no começo)</p>
+    <h1>Range</h1>
+    <p>O range é um recurso que permite o usuário medir algo. Por exemplo, as pesquisas de satisfação</p>
+    <form action="cadastro.java">
+
+        <p>
+            <label for="cor">satisfação</label>
+            <input type="range" name="ran" id="rang">
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    <p>Por padrão, o range vai de 0 a 100. Caso eu precise de números menores (ou maiores), basta usar os atriburos min="" e max=""</p>
+    <form action="cadastro.java">
+        <fieldset>
+            <legend>Este vai do 1 ao 10</legend>
+            <p>
+                <label for="cor">satisfação</label>
+                <input type="range" name="ran" id="rang" min="1" max="10">
+            </p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+    <form action="cadastro.java">
+        <fieldset>
+            <legend>Este vai do 1 ao 1000</legend>
+            <p>
+                <label for="cor">satisfação</label>
+                <input type="range" name="ran" id="rang" min="1" max="1000">
+            </p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+    <h1>File</h1>
+    <p>O file permite que o usuário envie arquivos. Existe também a opção image, a diferença é imagem sou eu quem defino, enquanto o file é o usuário que define. Lembrando que, para o envio de arquivos, o método a ser usado é Post, e não Get.</p>
+
+    <form action="cadastro.java" method="post">
+        <p>
+            <label for="cor">Cor</label>
+            <input type="color" name="core" id="cor" value="#ffffff">
+        </p>
+            <p>
+                <label for="cor">satisfação</label>
+                <input type="range" name="ran" id="rang" min="1" max="1000">
+            </p>
+            <p>
+                <label for="cor">Envie um arquivo</label>
+                <input type="file" name="image" id="img">            
+            </p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+    </form>
+    <h1>Value</h1>
+    <p>Value é um atributo que pode ser usado em todos (ou quase todos) os recursos de input. Ele serve para definir o valor padrão dos inputs que serão exibidos inicialmente.</p>
+</body>
+</html>

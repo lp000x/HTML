@@ -65,5 +65,51 @@
         <p></p>
     </form>
 
+    <h1>Email e Telefone</h1>
+
+    <form action="cadastro.java" method="get">
+        <p>
+            <label for="ema">Data De Nascimento</label> <input type="email" name="numb" id="ema" required placeholder="Seu Email">
+        </p>
+        <p>
+            <label for="tel">Data De Nascimento</label> <input type="tel" name="numb" id="tel" required placeholder="Seu Telefone">
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+
+    <p>O <strong><code>email</code></strong> não verifica se o email existe de verdade, apenas verifica se tem um @ (literalmente só isso, se tem um @)</p>
+    <p>Uma coisa muito importante para estudar sobre formulários é os RegEx (expressões regulares), um assunto não abordado nesse curso.</p>
+    <h1>Fieldset e legend</h1>
+    <p>O fieldset cria um campo, agrupando os textos e inputs. Já o legend é como o caption das tabelas</p>
+    <p><strong>ATENÇÃO PARA HIERARQUIA:</strong>form > fieldset > legend > p</p>
+
+    <form action="cadastro.java">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="11">Nome</label> <input type="text" name="1" id="11">
+            </p>
+            <p>
+                <label for="22">Digite Seu Sobrenome</label> <input type="text" name="2" id="22" required placeholder="Digite Seu Sobrenome">
+            </p>
+            <p>
+                <label for="33">Email</label> <input type="email" name="3" id="33" required placeholder="Digite Seu Email">
+            </p>
+            <p>
+                <label for="44">Telefone</label> <input type="tel" name="4" id="44" required placeholder="Digite Seu Telefone">
+            </p>
+            <p>
+                <label for="55">Data de Nascimento</label> <input type="date" name="5" id="55" required placeholder="Digite Sua Data de Nascimento">
+            </p>
+            <p>
+                <label for="66">A hora de seu nascimento</label> <input type="time" name="6" id="66" required placeholder="">
+            </p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+
+    </form>
+
 </body>
 </html>
