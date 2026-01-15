@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h1>Mais Controles: number</h1>
+    <p>Caso eu precise inserir um input que aceite apenas números, basta eu digitar "number" no type</p>
+    <form action="cadastro.java">
+        <p>
+            <label for="let"></label>Nome <input type="text" name="letr" id="let" required placeholder="Digite Seu Nome">
+        </p>
+        <p>
+            <label for="num">Senha Numerica </label><input type="number" name="numb" id="num" required placeholder="Apenas Números" max="10" step="0.5">
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p>E caso eu queira colocar um limite de número ou uma quantidade minima, eu posso também usando <code>min</code> e/ou <code>max</code></p>
+    <p>E se, ainda por cima, eu precisar de números fracionados, eu uso o <code>step</code>. Posso então colocar os valores desejados, com a atenção:</p>
+    <ul>
+        <li>Se eu colocar step="0.1", qualquer número fracionado entre 1 e 2 (e entre todos os números) será aceito</li>
+        <li>Se eu colocar step="0.5", apenas 1.5, 2.5, 3.5 e etc será aceitos.</li>
+        <li>A mesma lógica vale para qualquer outro valor</li>
+    </ul>
+
+    <h1>Mês</h1>
+    <p>O controle de mês permite colocar um input que oferece ao usuário um calendário com os meses e anos para ele selcionar</p>
+    <form action="cadastro.java">
+        <p>
+            <label for="let"></label>Nome <input type="text" name="letr" id="let" required placeholder="Digite Seu Nome">
+        </p>
+        <p>
+            <label for="num">Mês e Ano De Nascimento</label> <input type="month" name="numb" id="num" required placeholder="Seu Mês de Nascimento">
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+    <h1>Dia, Mês e Ano</h1>
+    <p>Esse controle permite o usuário colocar datas exatas, e não apenas uma delas.</p>
+    <form action="cadastro.java">
+        <p>
+            <label for="let"></label>Nome <input type="text" name="letr" id="let" required placeholder="Digite Seu Nome">
+        </p>
+        <p>
+            <label for="num">Mês e Ano De Nascimento</label> <input type="date" name="numb" id="num" required placeholder="Sua Data de Nascimento">
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+    <h1>Hora</h1>
+    <p>É possível também adicionar hora:</p>
+    <form action="cadastro.java">
+        <p>
+            <label for="let"></label>Nome <input type="text" name="letr" id="let" required placeholder="Digite Seu Nome">
+        </p>
+        <p>
+            <label for="num">Data De Nascimento</label> <input type="date" name="numb" id="num" required placeholder="Sua Data de Nascimento">
+        </p>
+        <p>
+            <label for="num1">Horário De Nascimento</label> <input type="time" name="numb1" id="num1" required placeholder="Seu Horário de Nascimento">
+        </p>
+        <input type="submit" value="Enviar">
+        <p></p>
+    </form>
+
+</body>
+</html>
