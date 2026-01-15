@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* Para Retratos (ou seja, altura maior que largura)*/
+
+body{
+    background-color: green;
+    background-image: url(../imagens/cev-portrait.jpg);
+}
+
+h1{
+    color: aquamarine;
+}

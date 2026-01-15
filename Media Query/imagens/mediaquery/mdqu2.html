@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css" media="screen">
+    <link rel="stylesheet" href="impressora/style.css" media="print">
+</head>
+<body>
+
+    <p class="printnone">No head, eu coloquei 2 links para CSS: um para a tela e outro para a impressora. Isso por si só já é o uso de Media Query.</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 153327.png" class="printnone">
+    <header>
+        <h1>NOTÍCIAS</h1>
+        <menu>
+            <ul>
+                <li>Esporte</li>
+                <li>Tecnologia</li>
+                <li>Politica</li>
+            </ul>
+
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>Media Queries</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum odit ut incidunt eligendi autem reprehenderit exercitationem laboriosam debitis dolorem, veniam nesciunt accusamus eum quod tenetur et perspiciatis at. Facilis, eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non minima fugit laboriosam aliquam perspiciatis repudiandae fuga quibusdam velit facilis eos minus pariatur officia, nisi perferendis. Excepturi consectetur maxime eum officia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolores est dolor saepe assumenda maxime. Officia explicabo, provident officiis cumque, in necessitatibus reprehenderit quaerat, quis repudiandae a consequatur fugiat eaque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium rem reiciendis omnis repellat sapiente cupiditate? Sunt veritatis quaerat corporis recusandae, enim non illum autem optio? Beatae expedita adipisci sunt nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet dolore modi sit provident aut soluta. Soluta dolores adipisci placeat, dolor porro molestiae repellendus a aperiam sint dolore commodi neque.lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint rerum reiciendis laborum eveniet nihil minima, expedita numquam consectetur ea libero iste perspiciatis quae quisquam excepturi nesciunt, enim exercitationem aliquam.</p>
+        </article>
+    </main>
+    <h1>O Que Está Acontecendo</h1>
+    <p>Para este mesmo documento, tem 2 CSSs:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 154653.png" class="p">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 154701.png" class="m">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 154707.png" class="g">
+    <p>Na tela, agora mesmo, está aparecendo as configurações da imagem do meio. Porém se eu colocar para imprimir essa página, somente as configurações da terceira imagem serão aplicadas:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 154857.png" class="gh">
+    <h1>Display:none</h1>
+    <p>Sempre que eu quiser desabilitar algum elemento em diferentes tamanhos de tela, eu uso o <code>display:none</code>. O display none faz com que o elemento selecionado (via class, id ou pela própria tag) não seja exibido </p>
+    <h1>Inclusão de Informações</h1>
+    <p>Caso eu queira incluir algo que não esteja no html, eu posso usar o pseudoelemento after:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 155645.png" class="gh">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 155653.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 155705.png" class="g">
+    <p>Como dá para ver, nesse documento em HTML não tem escrito o "Este documento foi escrito com lorem", mas tem na impressão</p>
+</body>
+</html>

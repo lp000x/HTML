@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Type</title>
+</head>
+<body>
+    <h1>Media Type</h1>
+    <p>Existem vários tipos de media type, mas os principais são 3: screen, all e print</p>
+    <ul>
+        <li>Screen: screen se refere a telas no geral (abrange celular, televisões, computadores...)</li>
+        <li>Print: se refere à impressão, ou seja, como a tela será exibida ao imprimir</li>
+        <li>All: se refere a todos os tipos de tela. É usado quando todos os formatos compartiham de algumas caracteristicas parecidas</li>
+    </ul>
+    <p>Porém, "screen" é amplo demais e não permite alterações para tamanhos diferentes de tela. Para realizar essas personalizações especificas, se usa o media features.</p>
+    <h1>Media Features</h1>
+    <p>Ao declarar apenas isso, é media query:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 161747.png">
+    <p>Ao declarar, além do tipo de tela, também esse <code>and (orientation:)"</code> estou usando media query em conjunto com media feature.</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 161754.png">
+    <strong>
+        <p>O que é esse "[...] and (orientation: portrait)" e "[...] and (orientation: landscape)"?</p>
+    </strong>
+    <p>Portrait e landscape se referem ao modo de exibição das telas:</p>
+    <ul>
+        <li>Portrait são telas em que a altura tem um valor maior que largura</li>
+        <li>landscape são telas em que a largura tem um valor maior que a altura</li>
+    </ul>
+    <h1>Mágica Acontecendo</h1>
+    <p>Para paisagem, eu defini no CSS fundo roxo com letra amarela. Para retrato, defini fundo verde com letra verde claro. Para ver acontecendo, basta tirar o navegador da aba e alterar o tamanho e altura da aba:</p>
+    <p>Retrato:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 163205.png">
+    <p>Paisagem</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-15 163151.png">
+</body>
+</html>

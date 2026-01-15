@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* Orientação Paisagem (Largura Maior que Altura)*/
+
+body{
+    background-color: blueviolet;
+    background-image: url(../imagens/cev-landscape.jpg);
+    background-position: left bottom;
+
+}
+
+h1{
+    color: yellow;
+}
