@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Breakpoint</title>
+</head>
+<body>
+
+    <h1>Typical Device Breakpoint</h1>
+    <p>Typical device breakpoint são tamanhos padronizados de telas, de pequenas (celulares) a grandes (TVs). Esse valor muda constantemente, pois as telas sempre estão se atualizando, então sempre é necessário consultar esses tamanhos.</p>
+    <p>Os dados que vou colocar abaixo não são do curso em vídeo, uma vez que ele foi gravado em 2020. Os dados abaixo são do Google, desse ano (2026):</p>
+    <ul>
+        <li>Extra Pequeno: 320px - 575px</li>
+        <li>Pequeno: 576px - 767px</li>
+        <li>Médio: 768px - 991px</li>
+        <li>Largo: 992px - 1199px</li>
+        <li>Extra Largo:1200px - 1399px</li>
+        <li>Extra Extra Largo: 1400px+</li>
+    </ul>
+    
+    <p>Para que isso serve? Até agora foi mostrado sobre media query e media features.</p>
+    <p>Media query é a adaptação do site para diferentes telas (de forma bem geral mesmo). Media Features é algo mais especifico: é definir se as estilizações feitas no documento CSS é para todas as páginas ou se é apenas para algumas, sendo esse "algumas" baseado em seu tamanho.</p>
+    <ul>
+        <li>Media="all": as configurações feitas com essa media featura serão aplicadas em todas as páginas com link para esse doc CSS</li>
+        <li>Media="print": as configurações serão aplicadas somente em páginas que serão imprimidas</li>
+        <li>Media="screen": as configurações serão aplicadas para as "telas", de modo geral</li>
+        <li>Media="screen and(orientation:landscape)": é uma especificação para o media screen, as estilizações serão aplicadas apenas quando a largura da tela for maior que a altura (pois landscape significa paisagem, e paisagem é a designação para dimensões em que a largura é maior que altura)</li>
+        <li>Meida="screen and(orientatio:portrait)": assim como landscape, é uma especificação para o media screen, porém as alterações feitas serão aplicadas apenas quando a altura for maior que a largura.</li>
+    </ul>
+
+    <p>Porém, mesmo com as especificações de portrait, ainda fica abrangente, pois uma telva de TV 40 polegadas tem uma largura maior que a altura, da mesma forma que um monitos de 20 polegadas também tem. Para especificar ainda mais, se usam os typical device breakpoint</p>
+
+    <p>Para usar é muit simples:</p>
+
+    <ul>
+        <li>Em um documento CSS (ou CSS local), eu uso a regra @media com screen</li>
+        <li>Frente ao screen, adiciono com and e ()</li>
+        <li>Entre parenteses, eu adiciono max-widith e o valor do breakpoint</li>
+    </ul>
+
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 104455.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 104445.png">
+    <h1>NA VERDADE</h1>
+    <p>É preciso adicionar o min também:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 104837.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 104845.png">
+
+    <p>Alguns detalhes na declaração:</p>
+    <ul>
+        <li>É preciso colocar "and" ao adicionar o max e min witdh</li>
+        <li>O min e max width precisam estar entre parenteses</li>
+    </ul>
+
+    <p>Como eu estou usando a abordagem Mobile First, a tela para celular já foi feita em um documento separado, então não preciso declarar valores do breakpoint para mobile.</p>
+</body>
+</html>

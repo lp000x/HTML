@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* IMPRESSORA */
+
+@media print {
+    #cel{display: none;}
+    #tab{display: none;}
+    #imp{display: none;}
+    #pc{display: none;}
+    #tv{display: none;}
+    
+}
+
+/* PHONE : NÃO PRECISA, PORQUE O MOBILE FIRST JÁ FOI FEITO*/
+
+@media screen and (max-width: 767px) {
+
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    body{
+        background: url(../imag/back-tablet.jpg);
+    }
+
+    #tab{
+        height: 300px;
+    }
+
+    main{
+        width: 600px;
+    }
+
+    #cel{display: none;}
+    #tab{display: block;}
+    #imp{display: none;}
+    #pc{display: none;}
+    #tv{display: none;}
+}
+
+/* PC */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    body{
+        background: url(../imag/back-pc.jpg);
+        background-position: top center;
+        background-size: contain;
+    }
+
+    #pc{
+        height: 400px;
+    }
+
+    main{
+        width: 700px;
+    }
+
+    #cel{display: none;}
+    #tab{display: none;}
+    #imp{display: none;}
+    #pc{display: block;}
+    #tv{display: none;}
+}
+
+/* TV */
+
+@media screen and (min-width: 1200px) {
+    body{
+        background: url(../imag/back-tv.jpg)
+    }
+
+    #tv{
+        height: 500px;
+    }
+    main{
+        width: 900px;
+    }
+
+    #cel{display: none;}
+    #tab{display: none;}
+    #imp{display: none;}
+    #pc{display: none;}
+    #tv{display: block;}
+}
