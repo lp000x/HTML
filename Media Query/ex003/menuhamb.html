@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburguer</title>
+</head>
+<body>
+
+    <h1>Como Inserir Icones do Google</h1>
+    <p>Uma das formas de adicionar icones, dentre eles o icone de hamburgues, é através do site do google icons. Basta acessar o site do Google Icons, procurar pelo icone desejado, clicar em cima dele e realizar um processo semelhante à adição de fontes.</p>
+    <p>Ao clicar no icone, abrirá um menu lateral. Abaixando um pouco, existe um campo onde posso pegar o link para o HTML (HTML, não CSS).</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 114359.png" alt="icon">
+    <p>Com o link, eu o colo na tag head do doc html</p>
+
+    <h1>Como Usar</h1>
+    <p>Para usar o icone, o Google disponibiliza um código para copiar e colar onde for necessário colocá-lo:</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 114657.png" alt="ic">
+
+    <h1>Como Aplicar o Menu Responsivo</h1>
+    <p>Para deixar apenas o menu Hamburguer visivel em dispositivos móveis, basta adicionar selecionar o menu no CSS e colocar um display none. Mas como fazer que, quando o usuário clicar em cima nele, apareça as opções? Para isso, é necessário usar Java.</p>
+
+    <h1>Menu Aberto Com Java</h1>
+    <p>Agora é hora de usar um pouco de Java. Onde o icone foi colocado (através do código que o google disponibiliza), eu vou adicionar uma função script: onclick="clickMenu()". Essa função diz que quando eu clicar no menu (clicar no menu é a função onclick), o menu vai realizar certa ação. Para ter mais clareza do que estou chamando, é preciso adicionar um id no menu.</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 115620.png">
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 115909.png" alt="">
+    <p>Agora, abaixo de todas as tags que marquei (ainda no body), eu vou adicionar um script.</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 115725.png">
+    <p>Nesse script, vou chamar a função clickMenu</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 120116.png">
+    <p>A lógica agora é a seguinte: dentro da função, vou selecionar o menu (itens) e vou dizer que, quando a ação for executada (o onclick clickMenu), o iten vai alterar seu estilo, de display none para display block.</p>
+    <p>Porém ainda não está funcionando muito bem, pois se eu clicar de novo nada acontece. O menu deve ser exibido ao clicar sobre o icone e se recolher quando clicado de novo. Para fazer isso, eu uso uma condicional.</p>
+    <p>Para realizar essas 2 ações, o código deve ser escrito de outra forma.</p>
+    <img src="c:\Users\Luis Paulo\OneDrive\Imagens\Capturas de tela\Captura de tela 2026-01-18 121447.png" alt="">
+
+</body>
+</html>

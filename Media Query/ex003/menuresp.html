@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade Menu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"/>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+        <span id="men" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="iten">
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+
+    <main>
+        <article>
+            <h1>Testando Meida Queries</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ab porro cum quidem quaerat ipsam inventore nihil a. Ipsa illum corrupti sequi ipsum quae recusandae blanditiis deserunt, dolore alias ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid rerum ipsa mollitia quae inventore molestias velit repellat quam, et perspiciatis autem quas iure fugit enim corrupti necessitatibus omnis ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ea obcaecati autem beatae voluptatum expedita quos, deleniti minima adipisci ad enim iusto aut sunt. Dolor rerum non tenetur? Quam, porro!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ab porro cum quidem quaerat ipsam inventore nihil a. Ipsa illum corrupti sequi ipsum quae recusandae blanditiis deserunt, dolore alias ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid rerum ipsa mollitia quae inventore molestias velit repellat quam, et perspiciatis autem quas iure fugit enim corrupti necessitatibus omnis ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ea obcaecati autem beatae voluptatum expedita quos, deleniti minima adipisci ad enim iusto aut sunt. Dolor rerum non tenetur? Quam, porro!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ab porro cum quidem quaerat ipsam inventore nihil a. Ipsa illum corrupti sequi ipsum quae recusandae blanditiis deserunt, dolore alias ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid rerum ipsa mollitia quae inventore molestias velit repellat quam, et perspiciatis autem quas iure fugit enim corrupti necessitatibus omnis ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ea obcaecati autem beatae voluptatum expedita quos, deleniti minima adipisci ad enim iusto aut sunt. Dolor rerum non tenetur? Quam, porro!</p>
+        </article>
+    </main>
+
+    <script>
+        function clickMenu() {
+            if (iten.style.display == 'block') {
+                iten.style.display = 'none'
+            } else{
+                iten.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
